@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), '..', '..', 'spec_helper')
+require 'spec_helper'
 
 describe GlobalCollect::RequestModels::InsertOrderWithPayment::RecurringOrder do
   it "should set ORDERTYPE to '4' when not provided" do

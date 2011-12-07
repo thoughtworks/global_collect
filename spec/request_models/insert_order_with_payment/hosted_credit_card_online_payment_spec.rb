@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), '..', '..', 'spec_helper')
+require 'spec_helper'
 
 describe "the hosted credit card online payment model" do
   it "should set HOSTEDINDICATOR to '1' when not provided" do

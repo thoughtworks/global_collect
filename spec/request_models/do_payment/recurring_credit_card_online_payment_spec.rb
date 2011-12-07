@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), '..', '..', 'spec_helper')
+require 'spec_helper'
 
 describe "the DO_PAYMENT recurring credit card online payment model" do
   it "should force CVVINDICATOR to '8' when not provided" do

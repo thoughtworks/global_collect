@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), '..', '..', 'spec_helper')
+require 'spec_helper'
 
 describe "the DO_PAYMENT payment builder" do
   before(:each) do

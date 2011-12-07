@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), '..', 'spec_helper')
+require 'spec_helper'
 class TestRequestModel < GlobalCollect::RequestModels::Base
   def fields; {"PLACEHOLDER" => ["AN12", "R"]}; end
 end

@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), '..', '..', 'spec_helper')
+require 'spec_helper'
 
 describe "the DO_PAYMENT recurring payment model" do
   it "should not allow blank EFFORTID" do

@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), '..', '..', 'spec_helper')
+require 'spec_helper'
 
 describe "the appendix to the collection report file" do
   it "should sort out the metadata from the file name" do

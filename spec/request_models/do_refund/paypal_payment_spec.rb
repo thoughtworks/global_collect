@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), '..', '..', 'spec_helper')
+require 'spec_helper'
 
 describe "the do_refund paypal payment model" do
   it "should set PAYMENTPRODUCTID to '1040' when not provided" do

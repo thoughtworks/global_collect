@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), '..', '..', 'spec_helper')
+require 'spec_helper'
 
 describe GlobalCollect::Responses::DoPayment::ResponseMethods do
   before(:each) do

@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), '..', '..', 'spec_helper')
+require 'spec_helper'
 
 describe GlobalCollect::RequestModels::InsertOrderWithPayment::RecurringHostedCreditCardOnlinePayment do
   it "should set CVVINDICATOR to '8' when not provided" do

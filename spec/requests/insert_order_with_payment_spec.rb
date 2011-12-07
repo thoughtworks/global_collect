@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), '..', 'spec_helper')
+require 'spec_helper'
 class AirlineDataBuilder
   def initialize(data);end
   def build(node)
@@ -37,17 +37,17 @@ describe "the insert order with payment request" do
     xml = @request.to_xml
     xml.should match_xpath("/XML/REQUEST/ACTION", "INSERT_ORDERWITHPAYMENT")
   end
-  
+
   it "should have a payment node" do
     xml = @request.to_xml
     xml.should have_xpath("/XML/REQUEST/PARAMS/PAYMENT")
   end
-  
+
   it "should have an order node" do
     xml = @request.to_xml
     xml.should have_xpath("/XML/REQUEST/PARAMS/ORDER")
   end
-  
+
   it "should allow extra builders, like AIRLINEDATA" do
     @request = GlobalCollect::Requests::InsertOrderWithPayment.new(
       [ @order, GlobalCollect::Builders::InsertOrderWithPayment::Order ],
