@@ -7,7 +7,7 @@ module GlobalCollect::LogParsing::CollectionReport
     # 1 char numeric year, 3 char numeric day-of-year,
     # extension /mt\d+/ if production, and no test equivalent.
     FILENAME_FORMAT = /^(\d{4})(\d{4})(\d{1})(\d{3})\.mt\d+$/
-    YEAR_BASE_ADJUSTED = ( Date.today.year * 10 ) / 10
+    YEAR_BASE_ADJUSTED = Date.today.year
     def initialize(path)
       @path = path
       if File.basename(path) =~ FILENAME_FORMAT

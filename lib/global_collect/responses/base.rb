@@ -10,43 +10,43 @@ module GlobalCollect::Responses
       @response_hash = response_hash
       @raw_response  = raw_response
     end
-    
+
     def success?
       RESPONSE_STATUS_SUCCESS[result]
     end
-    
+
     def action
       request['ACTION']
     end
-    
+
     def response_datetime
       Time.parse(meta['RESPONSEDATETIME']) if meta['RESPONSEDATETIME']
     end
-    
+
     def request_id
       meta['REQUESTID']
     end
-    
+
     def version
       meta['VERSION']
     end
-    
+
     def errors
       return [] if success?
       errs = response['ERROR'].is_a?(Array) ? response['ERROR'] : [response['ERROR']]
       return errs.map{|err| RequestError.new(err['CODE'].to_i, err['MESSAGE']) }
     end
-    
+
     def malformed?
       !response_hash['XML']
     end
-    
+
     protected
 
     def result
       response['RESULT']
     end
-    
+
     def meta
       response['META']
     end
@@ -55,13 +55,13 @@ module GlobalCollect::Responses
     def response
       request['RESPONSE']
     end
-    
+
     def request
       response_hash['XML']['REQUEST']
     end
-    
+
     private
-    
+
     RESPONSE_STATUS_SUCCESS = {
       'OK'  => true,
       'NOK' => false

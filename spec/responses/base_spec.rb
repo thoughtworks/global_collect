@@ -12,7 +12,7 @@ describe "the base response" do
 
     it "should identify meta fields correctly" do
       @response.request_id.should == "3000852"
-      @response.response_datetime.should == Time.parse("Fri Apr 09 02:03:09 -0700 2010")
+      @response.response_datetime.should == Time.parse("Fri Apr 09 02:03:09 2010")
     end
 
     it "should give you the raw hash to access" do
@@ -41,7 +41,7 @@ describe "the base response" do
 
     it "should identify meta fields correctly" do
       @response.request_id.should == "3000854"
-      @response.response_datetime.should == Time.parse("Fri Apr 09 02:03:28 -0700 2010")
+      @response.response_datetime.should == Time.parse("Fri Apr 09 02:03:28 2010")
     end
 
     it "should provide the errors" do
