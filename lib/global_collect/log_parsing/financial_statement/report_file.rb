@@ -29,21 +29,19 @@ module GlobalCollect::LogParsing::FinancialStatement
     end
 
     def parse
-      begin
-        file = File.open(@path, "r")
+      File.open(@path, "r") do |file|
         # Skip the BOM if it appears
         if (1..3).map{|i| file.getc.chr }.join != "\357\273\277"
           file.rewind
         end
-        csv = FasterCSV.new(file, :col_sep => "\t")
+        require 'csv'
+        csv = CSV.new(file, :col_sep => "\t")
         hashes = csv.map{|l| convert_line(l) }
         @data = {
           :header  => hashes.first,
           :trailer => hashes.last ,
           :data   => hashes[1..-2]
         }
-      ensure
-        file.close
       end
     end
 

@@ -17,15 +17,13 @@ module GlobalCollect::LogParsing::CollectionReport
     end
 
     def parse
-      begin
-        file = File.open(@path, "r")
-        csv = FasterCSV.new(file,
+      require 'csv'
+      File.open(@path, "r") do |file|
+        csv = CSV.new(file,
           :col_sep => ";",
           :headers => FIELDS.map(&:first)
         )
         @data = {:data_records => csv.map{|l| convert_line(l) }}
-      ensure
-        file.close
       end
     end
 
