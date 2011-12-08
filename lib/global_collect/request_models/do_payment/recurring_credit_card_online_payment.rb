@@ -1,3 +1,5 @@
+require File.join(File.dirname(__FILE__), 'recurring_payment')
+
 module GlobalCollect::RequestModels::DoPayment
   class RecurringCreditCardOnlinePayment < RecurringPayment
     def initialize(attributes)

@@ -1,3 +1,5 @@
+require File.join(File.dirname(__FILE__), 'payment')
+
 module GlobalCollect::RequestModels::InsertOrderWithPayment
   class CreditCardOnlinePayment < Payment
     def suggested_response_mixins
