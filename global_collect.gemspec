@@ -24,9 +24,9 @@ extensibility in mind.
   s.specification_version = 3
 
   s.add_dependency 'httparty', '= 0.5.2'
-  s.add_dependency 'builder', '~> 2.0'
-  s.add_dependency 'fixed_width', '~> 0.2'
-  s.add_dependency 'fakeweb', '~> 1.2'
+  s.add_dependency 'builder'
+  s.add_dependency 'fixed_width'
+  s.add_dependency 'fakeweb'
   s.add_dependency 'crack'
 
   s.add_development_dependency 'rspec'
