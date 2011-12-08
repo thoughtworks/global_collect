@@ -29,6 +29,6 @@ extensibility in mind.
   s.add_dependency 'fixed_width', '~> 0.2'
   s.add_dependency 'fakeweb', '~> 1.2'
 
-  s.add_development_dependency 'rspec', '< 2.0'
-  s.add_development_dependency 'rake', '> 0.9'
+  s.add_development_dependency 'rspec'
+  s.add_development_dependency 'rake'
 end
