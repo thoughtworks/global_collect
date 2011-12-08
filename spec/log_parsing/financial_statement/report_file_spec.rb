@@ -41,7 +41,7 @@ describe "the financial statement report file" do
   it "should parse without BOM" do
     require 'tempfile'
     tf = Tempfile.new("FS55550148COMPANY.asc")
-    tf.write(File.read(support_path("FS55550148COMPANY.asc"))[3..-1]) #remove BOM
+    tf.write(File.read(support_path("FS55550148COMPANY.asc"))[1..-1]) #remove BOM
     tf.rewind
     report = GlobalCollect::LogParsing::FinancialStatement::ReportFile.new(tf.path)
     report.parse

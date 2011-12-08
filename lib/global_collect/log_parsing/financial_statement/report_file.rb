@@ -31,12 +31,14 @@ module GlobalCollect::LogParsing::FinancialStatement
     def parse
       File.open(@path, "r") do |file|
         # Skip the BOM if it appears
-        if (1..3).map{|i| file.getc.chr }.join != "\357\273\277"
+        if file.getc.chr != "\357\273\277"
           file.rewind
         end
         require 'csv'
-        csv = CSV.new(file, :col_sep => "\t")
-        hashes = csv.map{|l| convert_line(l) }
+        hashes = []
+        CSV.parse file.read, :col_sep => "\t" do |line|
+          hashes << convert_line(line)
+        end
         @data = {
           :header  => hashes.first,
           :trailer => hashes.last ,
@@ -47,7 +49,7 @@ module GlobalCollect::LogParsing::FinancialStatement
 
     private
     RECORD_TYPE = {
-      "HDR" => :file_header ,
+      "HDR" => :file_header,
       "TRL" => :file_trailer,
       "FS"  => :data_record
     }
@@ -85,7 +87,7 @@ module GlobalCollect::LogParsing::FinancialStatement
       when :file_header then HEADER_FIELDS
       when :file_trailer then TRAILER_FIELDS
       when :data_record then DATA_FIELDS
-      end.each_with_index do |pair,i|
+      end.each_with_index do |pair, i|
         out[pair.first] = pair.last.call(line[i])
       end
       out
