@@ -31,4 +31,6 @@ extensibility in mind.
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'rake'
   s.add_development_dependency 'geminabox'
+  s.add_development_dependency 'yard'
+  s.add_development_dependency 'redcarpet'
 end

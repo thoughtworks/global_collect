@@ -3,3 +3,4 @@
 /rdoc
 .DS_Store
 Gemfile.lock
+.yardoc
