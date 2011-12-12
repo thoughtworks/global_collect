@@ -1,3 +1,5 @@
+require File.join File.dirname(__FILE__), 'payment'
+
 module GlobalCollect::RequestModels::DoPayment
   class RecurringPayment < Payment
     def fields
