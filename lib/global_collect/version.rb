@@ -1,4 +1,4 @@
 # -*- encoding : utf-8 -*-
 module GlobalCollect
-  VERSION = '0.5.7'
+  VERSION = '0.5.8'
 end
