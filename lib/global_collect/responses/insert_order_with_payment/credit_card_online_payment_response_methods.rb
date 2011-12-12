@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module GlobalCollect::Responses::InsertOrderWithPayment
   # WDL §5.28.2 TABLE 115 specifies the possible return keys
   module CreditCardOnlinePaymentResponseMethods

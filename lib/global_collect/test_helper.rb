@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'fakeweb'
 
 def support_path(filename)

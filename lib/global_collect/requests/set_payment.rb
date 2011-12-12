@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module GlobalCollect::Requests
   class SetPayment < GlobalCollect::Requests::Composite
     # WDL §5.33 requires a PAYMENT node and allows more optional nodes

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module GlobalCollect::Responses
   # WDL §4 specifies the generalized response
   # This base class is sufficient for many responses that don't include anything

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module GlobalCollect::Const
   module PaymentStatus
     def self.from_code(code)

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module GlobalCollect::RequestModels::SetPayment
   class Payment < GlobalCollect::RequestModels::Base
     # WDL §5.33.1 specifies the full list of possible fields

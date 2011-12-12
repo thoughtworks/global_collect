@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module GlobalCollect::RequestModels::InsertOrderWithPayment
   class RecurringOrder < Order
     def initialize(attributes)

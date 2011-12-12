@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module GlobalCollect::LogParsing::PaymentReport
   HEADER_TRAILER_FIELDS = [
     {

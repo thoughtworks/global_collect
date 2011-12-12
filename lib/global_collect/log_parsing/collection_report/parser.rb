@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module GlobalCollect::LogParsing::CollectionReport
   class Parser
     def self.parse(file)

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module GlobalCollect::LogParsing::CollectionReport
   class AppendixReportFile
     attr_reader :path, :account_id, :date, :data, :environment

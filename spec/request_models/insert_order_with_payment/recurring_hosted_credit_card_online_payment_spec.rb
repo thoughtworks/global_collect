@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'spec_helper'
 
 describe GlobalCollect::RequestModels::InsertOrderWithPayment::RecurringHostedCreditCardOnlinePayment do

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module GlobalCollect::RequestModels::InsertOrderWithPayment
   class Payment < GlobalCollect::RequestModels::Base
     # WDL §5.28.1 TABLE 105 specifies the full list of possible fields

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module GlobalCollect::LogParsing::FinancialStatement
   class ReportFile
     attr_reader :path, :account_id, :date, :environment, :data

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module GlobalCollect::Requests
   class ConvertAmount < GlobalCollect::Requests::Simple
     # WDL §5.7

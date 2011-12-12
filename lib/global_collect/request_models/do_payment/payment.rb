@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module GlobalCollect::RequestModels::DoPayment
   class Payment < GlobalCollect::RequestModels::Base
     def suggested_response_mixins

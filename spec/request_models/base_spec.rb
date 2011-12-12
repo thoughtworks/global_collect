@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'spec_helper'
 class TestRequestModel < GlobalCollect::RequestModels::Base
   def fields; {"PLACEHOLDER" => ["AN12", "R"]}; end

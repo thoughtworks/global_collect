@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module GlobalCollect::Const
   module PaymentProduct
     def self.from_sym(sym)

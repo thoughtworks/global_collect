@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module GlobalCollect::Responses::DoRefund
   # WDL §5.16.2 specifies the possible return keys
   module ResponseMethods

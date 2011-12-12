@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module GlobalCollect::Requests
   class InsertOrderWithPayment < GlobalCollect::Requests::Composite
     # WDL §5.28 requires ORDER and PAYMENT nodes in PARAMS, but may optionally

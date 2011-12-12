@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module GlobalCollect::Requests
   class DoPayment < GlobalCollect::Requests::Composite
     # WDL §5.13 requires at least a PAYMENT node in PARAMS, but may optionally

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module GlobalCollect
    # WDL §5 TABLE 10 specifies the tokens and their meaning
   class FieldValidator

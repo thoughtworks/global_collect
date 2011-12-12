@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module GlobalCollect::Builders::InsertOrderWithPayment
   class Order < Struct.new(:order)
     def build(node)

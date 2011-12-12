@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module GlobalCollect::Builders::SetPayment
   class Payment < Struct.new(:payment)
     def build(node)

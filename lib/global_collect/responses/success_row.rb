@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module GlobalCollect::Responses
   # This is one of the classes of response that you can get from the API, which
   # if successful returns a structure like:

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module GlobalCollect::Responses::GetOrderStatus
   # WDL §5.23.2 specifies the possible return keys
   module V1ResponseMethods

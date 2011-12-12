@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module GlobalCollect::RequestModels::DoRefund
   class PaypalPayment < GlobalCollect::RequestModels::DoRefund::Payment
     def initialize(attributes)

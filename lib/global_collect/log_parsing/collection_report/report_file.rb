@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module GlobalCollect::LogParsing::CollectionReport
   class ReportFile
     attr_reader :path, :account_id, :master_account_id, :date, :environment, :data

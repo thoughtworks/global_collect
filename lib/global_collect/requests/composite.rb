@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module GlobalCollect::Requests
   class Composite < GlobalCollect::Requests::Base
     

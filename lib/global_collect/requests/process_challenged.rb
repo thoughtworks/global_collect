@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module GlobalCollect::Requests
   class ProcessChallenged < GlobalCollect::Requests::Simple
     # WDL §5.30
