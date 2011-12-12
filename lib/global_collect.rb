@@ -13,13 +13,13 @@ module GlobalCollect::RequestModels; end
 module GlobalCollect::Responses; end
 
 lib_dir = File.dirname(__FILE__)
-Dir[File.join(lib_dir, '**/*.rb')].each do |f|
+Dir[File.join(lib_dir, '**/*.rb')].sort.each do |f|
   require f
 end
 
 module GlobalCollect
   extend self
-  
+
   attr_accessor :merchant_id
   attr_accessor :authentication_scheme
   attr_accessor :ip_address # only used if authentication_scheme is :ip_check
@@ -31,7 +31,7 @@ module GlobalCollect
   def merchant_link_client
     GlobalCollect::ApiClient.new(:merchant_link, environment, authentication_scheme)
   end
-  
+
   def wire_logger
     @wire_logger ||= if self.wire_log_file
       Logger.new(self.wire_log_file)
