@@ -1,3 +1,5 @@
+require File.join File.dirname(__FILE__), 'credit_card_online_payment'
+
 module GlobalCollect::RequestModels::InsertOrderWithPayment
   class HostedCreditCardOnlinePayment < CreditCardOnlinePayment
     def initialize(attributes)
