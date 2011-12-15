@@ -12,7 +12,7 @@ With what's here and a basic web app you should be able to use the Hosted Mercha
 
         gem install global_collect
 
-* See examples.rb, fill in your merchant id, and authentication scheme and then run the first example, which is a `TEST_CONNECTION` call to make sure everything is nominally OK.
+* See examples/test_connection.rb, fill in your merchant id, and authentication scheme and then run the first example, which is a `TEST_CONNECTION` call to make sure everything is nominally OK.
 
 ## Breakdown
 ### Requests
