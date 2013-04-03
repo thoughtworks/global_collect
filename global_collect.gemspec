@@ -22,7 +22,7 @@ extensibility in mind.
   s.rdoc_options = ['--charset=UTF-8']
   s.require_paths = ['lib']
 
-  s.add_dependency 'httparty', '= 0.5.2'
+  s.add_dependency 'httparty'
   s.add_dependency 'builder'
   s.add_dependency 'fixed_width'
   s.add_dependency 'fakeweb'

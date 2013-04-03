@@ -19,6 +19,6 @@ describe "the payment report file" do
   it "should parse" do
     report = GlobalCollect::LogParsing::PaymentReport::ReportFile.new(support_path("55550141.wr1"))
     report.parse
-    report.data.should_not be_blank
+    report.data.should_not be_empty
   end
 end

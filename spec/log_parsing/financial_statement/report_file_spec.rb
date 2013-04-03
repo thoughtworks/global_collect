@@ -10,7 +10,7 @@ describe "the financial statement report file" do
   end
 
   def check_report(report)
-    report.data.should_not be_blank
+    report.data.should_not be_empty
     report.data[:header][:record_type].should == :file_header
     report.data[:header][:relation_number].should == 'R0555500'
     report.data[:header][:date_production].should == Date.ordinal(2010, 148)
