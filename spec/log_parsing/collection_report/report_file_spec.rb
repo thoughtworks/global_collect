@@ -6,13 +6,13 @@ describe "the collection report file" do
     report = GlobalCollect::LogParsing::CollectionReport::ReportFile.new("555555550145.mt1")
     report.account_id.should == "5555"
     report.master_account_id.should == "5555"
-    report.date.should == Date.ordinal(2012, 145)
+    report.date.should == Date.ordinal(Date.today.year, 145)
     report.environment.should == :production
   end
 
   it "should parse" do
     report = GlobalCollect::LogParsing::CollectionReport::ReportFile.new(support_path("555555550145.mt1"))
     report.parse
-    report.data.should_not be_blank
+    report.data.should_not be_empty
   end
 end

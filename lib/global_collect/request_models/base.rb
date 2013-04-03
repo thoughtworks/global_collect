@@ -22,14 +22,14 @@ module GlobalCollect::RequestModels
           @errors = { field => "is invalid. Should conform to #{validations.inspect}" }
         end
       end
-      return @errors.blank?
+      return @errors.nil? || @errors.empty?
     end
-    
+
     def [](key)
       raise ArgumentError.new("Invalid attribute name '#{key}'!") unless fields.key?(key)
       @attributes[key]
     end
-    
+
     def []=(key, value)
       raise ArgumentError.new("Invalid attribute name '#{key}'!") unless fields.key?(key)
       @attributes[key] = value

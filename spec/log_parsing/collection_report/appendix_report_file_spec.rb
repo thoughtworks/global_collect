@@ -12,7 +12,7 @@ describe "the appendix to the collection report file" do
   it "should parse" do
     report = GlobalCollect::LogParsing::CollectionReport::AppendixReportFile.new(support_path("555520100602.csv"))
     report.parse
-    report.data.should_not be_blank
+    report.data.should_not be_empty
     report.data.should == {
         :data_records => [
            {

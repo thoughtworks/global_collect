@@ -5,12 +5,12 @@ describe "the financial statement report file" do
   it "should sort out the metadata from the file name" do
     report = GlobalCollect::LogParsing::FinancialStatement::ReportFile.new("FS55550148COMPANY.asc")
     report.account_id.should == "5555"
-    report.date.should == Date.ordinal(2012, 148)
+    report.date.should == Date.ordinal(Date.today.year, 148)
     report.environment.should == :production
   end
 
   def check_report(report)
-    report.data.should_not be_blank
+    report.data.should_not be_empty
     report.data[:header][:record_type].should == :file_header
     report.data[:header][:relation_number].should == 'R0555500'
     report.data[:header][:date_production].should == Date.ordinal(2010, 148)
