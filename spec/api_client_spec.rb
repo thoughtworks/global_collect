@@ -76,13 +76,13 @@ describe 'the api client' do
     )
     lambda { client.make_request(request) }.should raise_error(Exception, /No response/)
   end
-  
+
   it "should error on a malformed response" do
     wire_up_response(:successful, :iowp, :v1)
     client = GlobalCollect::ApiClient.new(:merchant_link, :test, :ip_check)
-    response = mock(:response, :body => "Foo bar", :code => "200", :delegate => {})
+    response = mock(:response, :body => "Foo bar", :code => "200", :parsed_response => {})
     client.class.should_receive(:post).and_return(response)
-    
+
     request = mock(
       :action => 'foo',
       :version => '1.0',
