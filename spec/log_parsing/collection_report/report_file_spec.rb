@@ -13,6 +13,6 @@ describe "the collection report file" do
   it "should parse" do
     report = GlobalCollect::LogParsing::CollectionReport::ReportFile.new(support_path("555555550145.mt1"))
     report.parse
-    report.data.should_not be_blank
+    report.data.should_not be_empty
   end
 end

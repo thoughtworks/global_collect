@@ -17,7 +17,7 @@ describe "the base response" do
     end
 
     it "should give you the raw hash to access" do
-      @response.hash.should_not be_blank
+      @response.hash.should_not be_nil
     end
 
     it "should not provide the errors" do
@@ -47,8 +47,8 @@ describe "the base response" do
 
     it "should provide the errors" do
       @response.errors.should_not be_empty
-      @response.errors.first.code.should_not be_blank
-      @response.errors.first.message.should_not be_blank
+      @response.errors.first.code.should_not be_nil
+      @response.errors.first.message.should_not be_nil
     end
 
     it "should provide the raw and parsed response" do
