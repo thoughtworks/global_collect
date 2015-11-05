@@ -4,14 +4,14 @@ module GlobalCollect::Const
     def self.from_code(code)
       info(code.to_i)
     end
-    
+
     def self.from_name(name)
       code, strings = STATUSES.detect{|k,v| v.first == name }
       info(code) if code
     end
 
     private
-    
+
     def self.info(code)
       raise ArgumentError.new("Invalid payment status code!") unless STATUSES.key?(code)
       Status.new(code, *STATUSES[code])
@@ -54,7 +54,6 @@ module GlobalCollect::Const
       650   => ["PENDING VERIFICATION"                                                    , "The real-time bank payment is pending verification by the batch process. If followed by 50 PENDING AT BANK, the verificationcould not be carried out successfully."                                                              ],
       800   => ["READY"                                                                   , "GlobalCollect accepted the payment instruction. For Credit Card Online the payment is authorized, but not yet settled. For a Real-time Bank Transfer the return message from the bank indicates that the payment was successful."],
       850   => ["MARKED FOR SENDING"                                                      , "Temporary status. The payment instruction was accepted and is being further processed."                                                                                                                                          ],
-      900   => ["SENT"                                                                    , "Temporary status. The payment instruction was accepted and is being further processed."                                                                                                                                          ],
       900   => ["PROCESSED"                                                               , "The refund was processed."                                                                                                                                                                                                       ],
       950   => ["INVOICE_SENT"                                                            , "The invoice was printed and sent."                                                                                                                                                                                               ],
       975   => ["SETTLEMENT IN PROGRESS"                                                  , "The settlement file was sent for processing at the financiali nstitution."                                                                                                                                                       ],
