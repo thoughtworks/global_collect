@@ -2,7 +2,7 @@
 require 'fakeweb'
 
 def support_path(filename)
-  File.expand_path File.join(File.dirname(__FILE__), '..', '..', 'spec', 'support', filename)
+  File.expand_path File.join(File.dirname(__FILE__), 'support', filename)
 end
 
 def read_support_file(filename)
