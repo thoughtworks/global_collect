@@ -6,7 +6,7 @@ require 'global_collect'
 # initialiaze the logger and silence it for the tests
 GlobalCollect.wire_logger.level = 4
 
-require 'global_collect/test_helper'
+require File.join(File.dirname(__FILE__), 'test_helper')
 
 FakeWeb.allow_net_connect = false
 def wire_up_response(success, action, version)
