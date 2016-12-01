@@ -25,9 +25,9 @@ extensibility in mind.
   s.add_dependency 'httparty'
   s.add_dependency 'builder'
   s.add_dependency 'fixed_width'
-  s.add_dependency 'fakeweb'
   s.add_dependency 'crack'
 
+  s.add_development_dependency 'fakeweb'
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'rake'
   s.add_development_dependency 'geminabox'
